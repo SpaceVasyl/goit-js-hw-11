@@ -13,14 +13,16 @@ function searchPhoto(e){
     if(!inputPhoto){
         return;
     }
-    findImages(inputPhoto).then((c)=>createMarkup(c))
+    findImages(inputPhoto).then((r)=>createMarkup(r)).catch((error)=>console.log(error))
 }
 
-function createMarkup(c){
-    console.log(c);
-    photoGallery.innerHTML = c.map((a)=>{
+function createMarkup(r){
+    console.log(r);
+    photoGallery.innerHTML = r.map((a)=>{
     const {webformatURL, largeImageURL, tags, likes, views, comments, downloads} = a;
-    
+    console.log(webformatURL);
+})
+}
 //     return `
 //     <div class="photo-card">
 //   <img src="${webformatURL}" alt="${tags}" loading="lazy" />
@@ -44,7 +46,3 @@ function createMarkup(c){
 //   </div>
 // </div>
 //     `
-})
-
-    console.log(c.largeImageURL);
-}
