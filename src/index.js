@@ -1,6 +1,8 @@
 import Notiflix from "notiflix";
 import axios from "axios";
 import {findImages} from './findImages';
+import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
 const form = document.querySelector('#search-form');
 const submit = document.querySelector('#submit');
 const photoGallery = document.querySelector('.gallery');
@@ -17,6 +19,7 @@ function searchPhoto(e){
 }
 
 function createMarkup(r){
+    
     console.log(r);
     photoGallery.innerHTML = r.hits.map((a)=>{
     const {webformatURL, largeImageURL, tags, likes, views, comments, downloads} = a;
@@ -42,4 +45,5 @@ function createMarkup(r){
      `
 }).join('')
 }
-//     
+
+const lightbox = new SimpleLightbox(".photo-card", { captionsData: "alt" , captionDelay: 250} );
