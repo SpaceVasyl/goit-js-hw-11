@@ -6,11 +6,18 @@
     gap: 30px;
 }
 .photo-card {
-    max-width : 200px;
     font-size: 12px;
 }
 
 .info {
     display: flex;
     width: 100%;
+    justify-content: space-around;
+}
+
+b{
+    display:block;
+}
+span{
+    text-align: center;
 }

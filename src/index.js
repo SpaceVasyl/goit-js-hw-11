@@ -27,16 +27,16 @@ function createMarkup(r){
 <div class="info">
 <p class="info-item">
 <b>Likes</b>
-${likes}</p>
+<span>${likes}</span></p>
 <p class="info-item">
  <b>Views</b>
- ${views}</p>
+ <span>${views}</span></p>
  <p class="info-item">
  <b>Comments</b>
- ${comments}</p>
+ <span>${comments}</span></p>
  <p class="info-item">
 <b>Downloads</b>
-${downloads}</p>
+<span>${downloads}</span></p>
 </div>
  </div>
      `
