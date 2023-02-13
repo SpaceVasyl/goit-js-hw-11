@@ -18,12 +18,10 @@ function searchPhoto(e){
 
 function createMarkup(r){
     console.log(r);
-    photoGallery.innerHTML = r.map((a)=>{
+    photoGallery.innerHTML = r.hits.map((a)=>{
     const {webformatURL, largeImageURL, tags, likes, views, comments, downloads} = a;
     console.log(webformatURL);
-})
-}
-//     return `
+    return `
 //     <div class="photo-card">
 //   <img src="${webformatURL}" alt="${tags}" loading="lazy" />
 //   <div class="info">
@@ -46,3 +44,6 @@ function createMarkup(r){
 //   </div>
 // </div>
 //     `
+})
+}
+//     
