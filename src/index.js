@@ -6,16 +6,21 @@ import "simplelightbox/dist/simple-lightbox.min.css";
 const form = document.querySelector('#search-form');
 const submit = document.querySelector('#submit');
 const photoGallery = document.querySelector('.gallery');
-const DEBOUNCE_DELAY = 300;
+let page;
 
 form.addEventListener("submit", searchPhoto);
-function searchPhoto(e){
+async function searchPhoto(e){
     e.preventDefault();
     const inputPhoto = e.target[0].value;
     if(!inputPhoto){
         return;
     }
-    findImages(inputPhoto).then((r)=>createMarkup(r)).catch((error)=>console.log(error))
+    try{
+    const url = await findImages(inputPhoto);
+    const resJSON = await ((url) => url.json());
+    const mark = await((resJSON)=>{createMarkup(resJSON); 
+            lightbox.refresh()})}
+    catch{(error)=>console.log(error)}
 }
 
 function createMarkup(r){
