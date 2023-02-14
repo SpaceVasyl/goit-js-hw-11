@@ -19,7 +19,7 @@ function searchPhoto(e){
 }
 
 function createMarkup(r){
-    
+    lightbox.refresh();
     console.log(r);
     photoGallery.innerHTML = r.hits.map((a)=>{
     const {webformatURL, largeImageURL, tags, likes, views, comments, downloads} = a;
@@ -46,4 +46,4 @@ function createMarkup(r){
 }).join('')
 }
 
-const lightbox = new SimpleLightbox(".gallery", { captionsData: "alt" , captionDelay: 250} );
+const lightbox = new SimpleLightbox(".gallery a", { captionsData: "alt" , captionDelay: 250} );
