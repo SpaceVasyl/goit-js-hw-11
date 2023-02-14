@@ -25,7 +25,7 @@ ol {
 
 a {
   text-decoration: none;
-  color: dimgray;
+  color: gray;
 }
 
 img {
@@ -42,7 +42,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fafafa;
-  color: dimgray;
+  color: gray;
   line-height: 1.5;
 }
 
@@ -79,7 +79,7 @@ body {
 }
 .search-btn:hover,
 .search-btn:focus {
-  background-color: rgba(71, 61, 139, 1);
+  background-color: rgb(71, 139, 61);
 }
 .search-btn:hover .search-icon,
 .search-btn:focus .search-icon {
@@ -148,6 +148,6 @@ body {
 
 .load-more:hover,
 .load-more:focus {
-  background-color: rgba(71, 61, 139, 1);
+  background-color: rgb(61, 139, 83);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
