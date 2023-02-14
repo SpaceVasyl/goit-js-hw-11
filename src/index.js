@@ -26,7 +26,7 @@ function createMarkup(r){
     console.log(webformatURL);
     return `
     <div class="photo-card">
-   <img src="${webformatURL}" alt="${tags}" loading="lazy" width='280'/>
+    <a href="${largeImageURL}"><img src="${webformatURL}" alt="${tags}" loading="lazy" width='280'/></a>
 <div class="info">
 <p class="info-item">
 <b>Likes</b>
@@ -46,4 +46,4 @@ function createMarkup(r){
 }).join('')
 }
 
-const lightbox = new SimpleLightbox(".photo-card", { captionsData: "alt" , captionDelay: 250} );
+const lightbox = new SimpleLightbox(".gallery", { captionsData: "alt" , captionDelay: 250} );
